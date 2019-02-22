@@ -1,11 +1,12 @@
-# serverless
+# Docker container for Serverless development with Python
 
 Automated Docker build for the Serverless framework
 
-There are two `Dockerfile`s which are nearly the same.  One uses
-Python 2 base image and the other Python 3.
+This is based off my methodology of running serverless Python application. Details on the entire
+setup [can be found in this blog
+post ](http://blog.brianz.bz/post/structuring-serverless-applications-with-python/)
 
-These images are built in Docker Cloud.  The Serverless version to
+These images are built in Docker Cloud. The Serverless version to
 build is specified as a build `ARG` (build argument) which is set
 using `--build-arg` during the `docker build` command.  To pass this
 argument, we need a Docker Cloud build hook which resides in
@@ -23,7 +24,8 @@ My workflow is usually:
 - Update versions in `Makefile` and run `make build`
 - If the build works, update the versions in `hooks/build`
 - Create PR
-- On merge to `master`, Docker Hub will do the builds automatically.
+- On merge to `master`, Docker Hub will do the builds automatically for both `latest` and a tagged
+  version, where the tag is the Serverless version..
 
 See the following for more information on Docker Cloud build hooks:
 

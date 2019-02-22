@@ -1,4 +1,4 @@
-FROM python:3.6.6
+FROM python:3.6.8
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y \
