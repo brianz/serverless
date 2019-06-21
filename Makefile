@@ -1,5 +1,5 @@
 NAME = brianz/serverless
-SERVERLESS_VERSION = 1.42.2
+SERVERLESS_VERSION = 1.45.0
 YARN_VERSION = 1.16.0
 
 .PHONY:	all py3 shell
@@ -17,3 +17,9 @@ py3 :
 
 py3-shell :
 	docker run --rm -it $(NAME):$(SERVERLESS_VERSION) bash
+
+push :
+	docker push $(NAME):$(SERVERLESS_VERSION)
+
+push-latest :
+	docker push $(NAME):latest
