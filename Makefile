@@ -1,5 +1,5 @@
 NAME = brianz/serverless
-SERVERLESS_VERSION = 1.45.0
+SERVERLESS_VERSION = 1.46.0
 YARN_VERSION = 1.16.0
 
 .PHONY:	all py3 shell
