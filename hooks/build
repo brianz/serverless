@@ -6,7 +6,7 @@ echo "Building $CACHE_TAG using build hook!"
 echo "Using $DOCKERFILE for build"
 
 docker build \
-        --build-arg SERVERLESS_VERSION= 1.50.0 \
+        --build-arg SERVERLESS_VERSION= 1.55.1 \
         --build-arg YARN_VERSION=1.16.0 \
         -f $DOCKERFILE \
         -t $IMAGE_NAME .
